@@ -10,9 +10,12 @@
     "@types/node": "^16.11.64",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1",
+    "styled-components": "^5.3.6",
     "typescript": "^4.8.4",
     "web-vitals": "^2.1.4"
   },
@@ -23,10 +26,24 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "plugins": [
+      "@typescript-eslint",
+      "prettier"
+    ],
     "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "rules": {
+      "@typescript-eslint/no-empty-interface": "off",
+      "no-empty-interface": "off",
+      "camelcase": "off"
+    },
+    "env": {
+      "browser": true
+    }
   },
   "browserslist": {
     "production": [
@@ -39,5 +56,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/parser": "^5.39.0",
+    "eslint": "8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "2.7.1"
   }
 }
